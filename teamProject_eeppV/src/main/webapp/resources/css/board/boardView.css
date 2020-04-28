@@ -1,0 +1,407 @@
+@charset "UTF-8";
+	/*
+	* 공통
+	*/
+	h3.cantReport{
+	font-size:16px;
+	}
+	/*
+	* write_view
+	*/
+.sc-writeView, .sc-contentView{
+	margin: 0 auto;
+	padding: 160px 0 120px;
+}
+.sc-writeView .sc-title{
+	font-size: 26px;
+    margin: 15px 0 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #2f2f2f;
+}
+.viewTable .tb-title{
+	width: 20%;
+    color: #59bfbf;
+    font-weight: bold;
+}
+
+.viewTable td{
+	padding-bottom:25px;
+	width:80%;
+}
+.viewTableWrap{
+	margin: 30px 0;
+    padding: 0 10px;
+}
+.viewTable{
+	width:100%;
+}
+.viewTableWrap .viewTable tr{
+	border-bottom: 1px solid #d8d8d8;
+}
+.viewTableWrap .viewTable td{
+	padding:15px 0;
+}
+.tb-writer{
+	font-weight:bold;
+}
+.boardSelector{
+	height: calc(2rem)!important;
+    padding: 0 1.75rem 0 .75rem!important;
+    vertical-align: initial!important;
+    font-size: 14px;
+    width: 320px!important;
+    background: #fff;
+}
+.tb-boardTitle{
+    width:100%!important;
+}
+.btnWrap{
+	display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+}
+.cancleBtn-wrap .btn{
+	width: 120px;
+    border: 1px solid #59bfbf;
+    color: #59bfbf;
+}
+.submitBtn-wrap .btn{
+	background: #59bfbf;
+    color: #fff;
+    width: 120px;
+}
+
+
+	/*
+	* contentView
+	*/
+
+#boardContentWrapper{
+	padding: 160px 40px 40px;
+    display: flex;
+}
+.contentSideWrap{
+	padding : 15px;
+}
+.contentSideWrap .category{
+	display: block;
+    border-bottom: 0.15rem solid #59bfbf;
+    color: #59bfbf;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.contentSideWrap .category.onCategory{
+	color: #e7438b!important;
+	 border-bottom: 0.15rem solid #e7438b!important;
+}
+.contentMainWrap{
+	padding: 0 40px;
+}
+.contentMainWrap .content-header{
+	display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 15px;
+}
+.headerInner{
+	padding-right: 20px;
+}
+.headerInner .bId{
+	font-size: 18px;
+    margin: 5px 0;
+    color: #827d7d;
+}
+.bContentTitle{
+	font-size: 24px;
+	margin:0;
+}
+.content-header .declarationForm .btn{
+	border: 1px solid #59bfbf;
+    width: 50px;
+    color: #59bfbf;
+    font-size: 13px;
+    padding: 5px 0;
+    margin: 0 10px;
+}
+.writeBtnWrap .btn{
+	width: 120px;
+    background: #59bfbf;
+    color: #fff;
+}
+.bContentTop{
+	border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+.bContentTop .bContentInfo{
+	display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.bContentInfo .writeUserInfo{
+	display: flex;
+    width: 60%;
+    align-items: center;
+}
+.writeUserInfo h2.userProfile{
+	width: 8%;
+    margin: 0;
+}
+.writeUserInfo h2.userProfile img{
+	max-width:100%;
+}
+.writeUserInfo .boardInfo{
+	margin-left: 15px;
+}
+.writeUserInfo a.userBtn{
+	font-size: 14px!important;
+}
+.boardInfo p.bDate{
+	font-size: 13px;
+    margin: 0;
+    color: #8a8a8a;
+}
+.infoIcons{
+	display: flex;
+}
+.infoIcons .title-icon{
+	margin: 0 10px 0;
+}
+.title-icon.blike{
+	color:#2cc5c5;
+}
+.title-icon.bunlike{
+	color:#e7438b;
+}
+.infoIcons .modifyBtn, .infoIcons .deleteBtn, .infoIcons .reportBtn{
+	margin: 0 10px 0;
+}
+.infoIcons .modifyBtn a, .infoIcons .deleteBtn a, .infoIcons .reportBtn a{
+	cursor: pointer;
+	font-size: 14px;
+    color: #5d5a5a;
+    text-decoration: underline;
+}
+.contentWrap{
+	position: relative;
+}
+.contentMain{
+	padding: 15px;
+    margin: 20px 0;
+}
+.contentMain p{
+	margin: 0;
+    line-height: 32px;
+}
+.contentMain img{
+	max-width:100%;	
+}
+.contentWrap .btnWrap{
+	display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: 30px auto;
+}
+.btnWrap .scrapBtn{
+	font-size: 10px;
+    color: #fff;
+    background: #313398;
+    margin: 0 20px;
+    width: 45px;
+    height: 45px;
+}
+.btnWrap .likeBtn{
+	font-size: 18px;
+    color: #fff;
+    background: #2cc5c5;
+    margin: 0 20px;
+    width: 45px;
+    height: 45px;
+}
+.btnWrap .unlikeBtn{
+	font-size: 18px;
+    color: #fff;
+    background: #e7438b;
+    margin: 0 20px;
+    width: 45px;
+    height: 45px;
+}
+.btnWrap .shareBtn{
+	margin: 0 20px;
+    width: 45px;
+    height: 45px;
+}
+.btnWrap .shareBtn .share{
+	display: block;
+    cursor: pointer;
+}
+.btnWrap .shareBtn .share img{
+	max-width:100%;
+}
+.listBtn{
+	text-align: center;
+    width: 240px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: #e8e8e8;
+}
+.listBtn a.list{
+	cursor: pointer;
+    padding: 5px 0;
+    color: #5f5f5f;
+    display: block;
+}
+.replyWrapper{
+	margin-top: 40px;
+}
+.replyTitle{
+	margin: 0;
+    background: #f1f1f1;
+    padding: 5px;
+}
+.replyWrapper .replyTable{
+	width:100%;
+	margin-top:15px;
+}
+.replyTable .replyWriter{
+	font-weight:bold;
+}
+.replyTable #rpContent{
+	padding: 5px 10px;
+}
+.replyBtnWrap{
+	width: 80px;
+    margin-left: auto;
+    text-align: center;
+    border-radius: 5px;
+    background: #59bfbf;
+}
+.replyBtnWrap #replyBtn{
+	display: block;
+    padding: 5px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+	/*
+	* reply
+	*/
+.replyList{
+	margin : 20px 0;
+}
+.replyBoxWrapper{
+	border-top: 1px solid #ddd;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.reReplyBox{
+	background:#f7f7f7;
+}
+.rpMain{
+	width:80%;
+	display: flex;
+}
+.rpMain .wrapeer{
+	width:100%;
+}
+.rpMain .isReply{
+	margin: 0 10px 0 0;
+}
+.rpMain .wrapper p{
+	margin: 0;
+}
+.replyDate p{
+	margin: 0;
+}
+.replyDate .reWrittenDate{
+	color: #8a8a8a;
+    margin-bottom: 5px;
+    font-size:13px;
+}
+.replyActive{
+	display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.replyActive .reReplyBtn a,
+.replyActive .reModifyBtn a,
+.replyActive .reDeleteBtn a,
+.replyActive .reReportBtn a{
+	font-size: 14px;
+    color: #5d5a5a;
+    cursor: pointer;
+}
+.replyInfo{
+	width: 5%;
+    text-align: center;
+}
+.replyInfo .reLike{
+	color: #2cc5c5;
+    margin: 0;
+}
+.replyInfo .reUnlike{
+	margin: 0;
+    color: #e7438b;
+}
+.infoIncon a{
+	cursor: pointer;
+}
+.modifyContentBox{
+	text-align: right;
+    padding: 0 30px 0 0;
+}
+.modifyContentBox input{
+	display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.modifyContentBox a{
+	cursor: pointer;
+}
+.modifyContentBox .modifyConfirm{
+	margin-right:15px;
+}
+.rRpWrapper{
+	margin: 20px 30px;
+	width: 80%;
+}
+.rRpInner .rRpWriter{
+	font-weight:bold;
+	margin-bottom:5px;
+	color:#59bfbf;
+}
+.rRpInner textarea{
+	display: block;
+	width:100%;
+    resize: none;
+    height: 60px;
+    padding: 5px 10px;
+}
+.rRpBtnWrap{
+	text-align:right;
+	width:100%;
+	margin-top:10px;
+}
+.rRpBtnWrap a{
+	cursor: pointer;
+}
+.rRpBtnWrap a.rRpWrite{
+	margin-right:15px;
+}
+.replyListpaging .page-link{
+	padding: .5rem!important;
+	margin-left: 0!important;
+}
+.replyList .rpContentInner_{
+	margin-top:8px;
+}
+.replyList .userBtn{
+	color: #59bfbf!important;
+}
+.replyList .myUserBtn, .rRpInner .myUserBtn{
+	color: #e7438b!important;
+}

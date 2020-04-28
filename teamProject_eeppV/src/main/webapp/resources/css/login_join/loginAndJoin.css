@@ -1,0 +1,509 @@
+@charset "UTF-8";
+
+/* login / Join 공통 */
+.required{color:#e7438b;margin-right: 10px;}
+.lg-inputBox{width: 280px;}
+button:focus{outline: initial!important;}
+/* login / Join 여기까지 */
+
+
+	/*
+	* 로그인페이지
+	*/
+.sc-login{
+	padding:160px 0 20px!important;
+}
+.loginMainTitle{
+	text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    letter-spacing: 0.08rem;
+}
+.loginMainTitle img{
+	vertical-align: top;
+    margin: 0 6px 0 3px;
+    max-width: 5%;
+}
+.loginpassBox{
+	margin-bottom:5px!important;
+}
+.sc-login .failedLogin{
+	color: #ea0909;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.rememberMeCheck{
+	font-size:13px;
+}
+.rememberMeCheck input{
+	font-size:16px;
+}
+.loginOrRegister{
+	margin-top: 15px;
+}
+.loginBtn button{
+	background: #000;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 0;
+    letter-spacing: 0.5rem;
+    border-radius: 10px;
+}
+.registerBtn{
+	margin-top:10px;
+}
+.registerBtn a{
+	background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 0;
+    letter-spacing: 0.5rem;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+}
+.registerBtn a:hover{text-decoration: none;color:#000;}
+.forgotBtn{
+	margin:10px 0;
+}
+.forgotBtn a{
+	text-decoration: none;
+    color: #000;
+}
+.sc-snsLogin{
+	padding: 0 0 80px!important;
+}
+.snsBtnWrap{
+	border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+.snsLoginTitle{
+	text-align:center;
+	margin-top:15px;
+	letter-spacing: 0.5rem;
+}
+.sns_login_button{
+	margin: 15px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sns_login_button span{
+	margin:0 15px;
+}
+.naverBtn{
+	width:45px;
+	border: none;
+	cursor: pointer;
+}
+.kakaoBtn, .googleBtn{
+	width:50px;
+	border: none;
+	cursor: pointer;
+}
+span img{
+	max-width:100%;
+}
+
+
+	/*
+	* 회원가입 유형 선택 페이지
+	*/
+.sc-chooseJoin{
+	padding: 160px 0!important;
+}
+.sc-chooseJoin .welcomeEE{
+	text-align: center;
+    font-weight: bold;
+    color: #59bfbf;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    line-height: 42px;
+}
+.sc-chooseJoin .welcomeEE span{
+	color: #e7438b;
+    font-size: 40px;
+}
+.sc-chooseJoin .subTitle{
+	text-align: center;
+    font-size: 14px;
+}
+.sc-chooseJoin .subTitle img{
+	max-width: 2%;
+    vertical-align: top;
+    margin: 0 5px 0 3px;
+}
+.sc-chooseJoin .normalBtnWrap{
+	margin-top:40px;
+}
+.sc-chooseJoin .snsBtnWrap{
+	margin-top:30px;
+}
+.sc-chooseJoin .isMember{
+	font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+.sc-chooseJoin .isMember a{
+	color: #1f1f1f;
+}
+
+	/*
+	* 아이디 비밀번호 찾기 페이지
+	*/
+.sc-forgot{
+	padding:160px 0!important;
+}
+.sc-forgot .forgot-wrapper{
+	margin-top: 40px;
+}
+.sc-forgot .infoText{
+	margin:15px 0;
+}
+.forgot-wrapper .tab-content{
+	margin:40px 0;
+}
+.forgot-wrapper .forgot-nav .nav-item{
+	width:50%!important;
+}
+.forgot-wrapper .forgot-nav .nav-item a{
+	color:#26274c!important;
+}
+.forgot-wrapper .forgot-nav .nav-item a.active{
+	color:#59bfbf!important;
+}
+#findMyEmail .title-phone{
+	display:block;
+	margin: 10px 0;
+}
+.custom-select{
+	height: calc(2rem)!important;
+	padding: 0 1.75rem 0 .75rem!important;
+	vertical-align: initial!important;
+	font-size: 14px;
+	}
+#findMyEmail .uPhone_2.custom-select, #findMyEmail .uPhone_3.custom-select{
+	background: initial!important;
+    width: 100px!important;
+    padding: 0 0.75em!important;
+}
+#findMyEmail .findEmailBtnWrap{
+	width: 180px;
+    margin: 20px auto;
+}
+#findMyEmail .findEmailBtn{
+	display: block;
+    border: 1px solid #59bfbf;
+    border-radius: 20px;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #59bfbf;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+#findMyEmail .isYourEmail{
+	font-size: 18px;
+	font-weight: bold;
+    color: #59bfbf;
+    margin: 20px 0 10px;
+}
+#findMyEmail .loginBtnWrap{
+	width:280px;
+	margin: 20px auto;
+}
+#findMyEmail .loginBtn{
+	display: block;
+    border: 1px solid #59bfbf;
+    border-radius: 20px;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #59bfbf;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+	text-decoration: none;
+    padding: 10px 0;
+}
+
+#findMyPW .title-uEmail{
+	margin: 10px 0;
+}
+#findMyPW .form-control.uEmail{
+	width: 320px!important;
+    margin: 0 auto!important;
+}
+#findMyPW .sendAuthBtnWrap,
+#findMyEmail .sendAuthBtnWrap{
+	width:280px;
+	margin: 20px auto;
+}
+#findMyPW .sendAuthBtn,
+#findMyEmail .sendAuthBtn{
+	display: block;
+    border: 1px solid #59bfbf;
+    border-radius: 20px;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #59bfbf;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+	text-decoration: none;
+    padding: 10px 0;
+}
+#findMyPW02{
+	width: 320px;
+    margin: 0 auto;
+}
+#findMyPW02 .form-control.findPWAuthCode, #findMyEmail .findIDAuthCode{
+	width: 180px;
+    font-size: 13px;
+    display: inline-block;
+}
+#findMyPW02 .authCheckBtnWrap, #findMyEmail .findEmailBtnWrap{
+	width: 80px;
+    margin-left: 20px;
+    display: inline-block;
+}
+#findMyPW02 .authCheckBtn, #findMyEmail .findEmailBtn{
+	display: block;
+    border: 1px solid #59bfbf;
+    border-radius: 20px;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #59bfbf;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+#findMyPW03 .form-control.uPassword {
+	width: 240px;
+    margin: 0 auto 20px;
+}
+#findMyPW03 .form-control.uPasswordCheck{
+	width: 240px;
+    margin: 0 auto 30px;
+}
+#findMyPW03 .changePwBtn{
+	width:280px;
+	margin: 20px auto;
+}
+#findMyPW03 .changePwBtn{
+	display: block;
+    border: 1px solid #59bfbf;
+    border-radius: 20px;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #59bfbf;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+	text-decoration: none;
+    padding: 10px 0;
+}
+
+
+	/*
+	* 회원가입
+	*/
+.joinForm-wrapper {
+	padding-top: 120px;
+}
+	
+.sc-welcome{
+	text-align: center;
+}
+.sc-welcome .welcomeEE{
+	color: #59bfbf;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0;
+}
+.sc-welcome .subTitle{
+	line-height: 32px;
+}
+.sc-title{
+	text-align: center;
+	font-size: 18px;
+	position: relative;
+	margin-bottom:40px;;
+}
+.sc-title:before{
+	content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    }
+.sc-title:after{
+	content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+}
+.agreement-wrap, .registerForm-wrap{
+	padding: 0 40px;
+}
+.agree_content{border: 1px solid #000;
+    padding: 10px;
+    height: 150px;
+    overflow: overlay;
+    font-size:12px;
+}
+.agreeCheck{
+	display: inline-block;
+	margin: 10px 0 20px;
+}
+.sc-registerForm .joinTable{
+	margin: 0 auto;
+}
+.sc-registerForm .joinTable span.checkInfo{
+	display: block;
+    margin: 5px;
+    position: absolute;
+    color: red;
+    font-size: 12px;
+}
+.sc-registerForm .joinTable .input-title{
+	font-weight: bold;
+    font-size: 16px;
+    color: #59bfbf;
+    width: 25%;
+}
+.sc-registerForm .joinTable td{
+	padding: 20px 0;
+    width: 70%;
+    position: relative;
+}
+.idInputBox input, .pwInputBox input, .nickInputBox input, .phoneInputBox input{
+	border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    padding: 0 1.75rem 0 .75rem!important;
+    background-color: white;
+    height: calc(2rem)!important;
+}
+.email_input_01{
+	width:120px;
+}
+.email_input_02, #emailAuth{
+	width:150px;
+}
+.checkEmailAuth {padding: 0 0 10px;}
+.sendSmsBtn, .smsCheckBtn{
+	padding: 5px 10px!important;
+    font-size: 14px!important;
+    vertical-align: initial!important;
+    cursor: pointer!important;
+    margin: 0 10px;
+    width: 120px;
+    background: #59bfbf;
+    color: #fff;
+    border: initial;
+    border-radius: 10px;
+}
+#smsAuth{
+	border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    padding: 0 1.75rem 0 .75rem!important;
+    background-color: white;
+    height: calc(2rem)!important;
+    width: 130px;
+}
+.checkEmailAuth{
+	padding: 0 0 20px!important;
+}
+.btn-submit{
+	width: 280px!important;
+    border-radius: 15px!important;
+    margin: 40px auto!important;
+    display: block!important;
+    color:#fff;
+    background-color:#59bfbf;
+    cursor: pointer!important;;
+}
+
+.profileInputBox th{
+	vertical-align: top!important;
+    padding-top: 40px!important;
+}
+.profile{
+	max-width: 320px;
+    position: relative;
+    text-align: center;
+}
+.basic_img{
+	width:40%;
+	border-radius:50%;
+}
+.choosePick{
+	text-align: center;
+    max-width: 400px;
+    margin-top: 5px;
+}
+.choosePick #file_route{
+	vertical-align: middle;
+    display: block;
+    width: 300px;
+    line-height: 28px;
+    font-size: 11px;
+    padding: 0;
+    border: 0;
+    margin: 0 auto;
+    box-shadow: 0 0 black;
+    text-align: center;
+}
+.choosePick label{
+	padding: 5px 10px!important;
+    font-size: 14px!important;
+    vertical-align: initial!important;
+    cursor: pointer!important;
+    width: 100px;
+    background: #59bfbf;
+    color: #fff;
+    border: initial;
+    border-radius: 10px;
+    text-align: center;
+}
+.choosePick label input{
+	position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.info_profile{
+	font-size: 12px;
+    color: gray;
+    margin: 10px 0 0;
+}
+#register_Btn{
+	margin : 0 40px!important;
+	padding: 7px 12px!important;
+    font-size: 13px!important;
+    vertical-align: initial!important;
+    cursor: pointer!important;
+}
+.company-box{margin-bottom:60px;}
+.sns_login_button{display: flex;align-items: center;justify-content: center;}
+.sns_login_button span{margin:0 15px;}
+button{border: none;cursor: pointer;width:80px;}
+.btn-normalJoin{width: 380px;font-weight: bold;color: #fff;background-color:#59bfbf}
+.btn-normalJoin:hover{opacity:0.6;}
+.snsJoin{margin-top:30px;}
+/* join 여기까지 */

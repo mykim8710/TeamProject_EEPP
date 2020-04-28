@@ -1,0 +1,496 @@
+@charset "UTF-8";
+
+/*
+* 마이페이지 css 부
+*/
+.mypageWrap, #adminWrap, #MPwrap {
+	padding-top: 100px;
+}
+
+a, a:hover, .bordered a  {
+	color: inherit;
+}
+
+.text_bold:hover,.liwrap:hover{
+	color: #e74386;
+}
+
+.bordered a:hover {
+	color: #e74386 !important;
+	text-decoration:none !important;
+}
+
+.text_bold a {
+	text-decoration: none;
+}
+
+.classForm .nav-item a.active {
+	color: #59bfbf;
+	border-color: #59bfbf #59bfbf #fff !important;
+}
+
+#table {
+	text-align: center;
+	height: 337px;
+	width: 100%;
+}
+
+.info td {
+	padding: 10px 0;
+	position: relative;
+}
+
+.trColor {
+	color: #e7438b;
+	font-weight: bold;
+	font-size: 15px;
+	height: 130px;
+}
+
+.trColor td {
+	font-size: 20px;
+	line-height: 60px;
+}
+
+.input-title {
+	font-weight: bold;
+	font-size: 16px;
+	color: #59bfbf;
+	width: 150px
+}
+
+.required {
+	color: #e7438b;
+	margin-right: 10px;
+}
+
+.drop {
+	font-size: 12px;
+	margin-left: 30px;
+}
+
+.img-circle {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	margin-left: 25%;
+	overflow: hidden;
+	border-radius: 75px;
+}
+
+#register_Btn, #changeImg {
+	margin-left: 10%;
+	width: 35%;
+	border-radius: 7px;
+	font-size: 0.7rem;
+	border-color: gray;
+}
+
+#mypagenickNameCheck, #charge, #pointBtn, #selectDeleteBtn1,
+	#selectDeleteBtn2, #selectDeleteBtn3 {
+	font-size: 0.8rem;
+	border-radius: 7px;
+	padding: 5px 10px;
+	background: #59bfbf;
+	color: white;
+	border: none;
+}
+
+#selectDeleteBtn_Sboard, #selectDeleteBtn_SClass,
+	#selectDeleteBtn_SEating {
+	font-size: 0.8rem;
+	border-radius: 7px;
+	background: #59bfbf;
+	color: white;
+	border: none;
+}
+
+span.checkInfo {
+	display: block;
+	position: absolute;
+	color: red;
+	font-size: 12px;
+}
+
+#submit {
+	font-size: 0.7rem;
+	border-color: gray;
+	border-radius: 7px;
+}
+
+.content_tr {
+	background-color: #59bfbf;
+	color: white;
+}
+
+.content_tr th {
+	font-size: 12px;
+}
+
+#searchBtn {
+	display: block;
+	cursor: pointer;
+}
+
+}
+#table th {
+	font-size: 16px;
+	height: 40px;
+	text-align: center;
+	background-color: #59bfbf;
+	color: white;
+}
+
+#table {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#table td {
+	font-size: 2rem;
+	height: 110px;
+	color: #e7438b;
+}
+
+.myinfoHeader {
+	text-align: center;
+	color: #59bfbf;
+}
+
+.text-wrap td {
+	height: 50px;
+}
+
+.myinfo-wrap h3, .myclass-wrap h3, #mpScBtn {
+	color: #59bfbf;
+}
+
+.infoUpdate {
+	background-color: #59bfbf;
+}
+
+#myinfobtn, #mycontentbtn, #myscrapbtn, #mypointbtn, #myclassbtn,
+	#mpRVBtn {
+	margin-right: 20px;
+	width: 10%;
+	background-color: #59bfbf;
+	border: none;
+}
+
+.btn-info {
+	border: none;
+}
+
+tr.bordered td {
+	padding-left: 13%;
+}
+
+tr.bordered td a {
+	font-size: 0.8rem;
+}
+
+.text-wrap {
+	width: 80%;
+}
+
+.text_bold {
+	color: #59bfbf;
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
+tr.bordered {
+	border-bottom: 1px solid #BDBDBD;
+}
+
+th {
+	font-size: 0.7rem;
+}
+
+td {
+	font-size: 0.8rem;
+}
+
+.po_In {
+	color: #59bfbf;
+}
+
+.po_Out {
+	color: #e7438b;
+}
+
+.choosePick {
+	text-align: center;
+	max-width: 400px;
+}
+
+.choosePick #file_route {
+	vertical-align: middle;
+	display: block;
+	width: 300px;
+	line-height: 28px;
+	font-size: 11px;
+	padding: 0;
+	border: 0;
+	margin: 0 auto;
+	box-shadow: 0 0 black;
+	text-align: center;
+}
+
+.choosePick label {
+	padding: 5px 10px !important;
+	font-size: 14px !important;
+	vertical-align: initial !important;
+	cursor: pointer !important;
+	width: 100px;
+	background: #59bfbf;
+	color: #fff;
+	border: initial;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.choosePick label input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.fa-caret-up {
+	color: #59bfbf;
+	font-size: 1.2rem;
+}
+
+.fa-caret-down {
+	color: #e7438b;
+	font-size: 1.2rem;
+}
+
+.table-bordered th, .table-bordered {
+	text-align: center;
+}
+
+#nav-class-open-tab, #nav-class-join-tab, #nav-board-tab, #nav-class-tab,
+	#nav-eating-tab {
+	color: #59bfbf;
+}
+
+#nav-class-open-tab:hover, #nav-class-join-tab:hover, #nav-board-tab:hover,
+	#nav-class-tab:hover, #nav-eating-tab:hover {
+	color: #59bfbf;
+}
+
+.Title a {
+	color: #000;
+}
+
+.Title a:hover, .bordered a:hover, #mpRVBtn1 {
+	color: #59bfbf;
+}
+
+.input-group-text {
+	display: flex;
+	align-items: center;
+	padding: .375rem .75rem;
+	margin-bottom: 0;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #495057;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #fff;
+	border: 1px solid #59bfbf;
+	border-radius: .25rem;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.input-group-text .fa-search {
+	font-size: 1rem;
+	color: #59bfbf;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+}
+
+.selectSearchType, .selectgrade {
+	height: calc(1.75rem) !important;
+	padding: 0 1.75rem 0 .75rem !important;
+	font-size: 12px;
+	background-color: #fff;
+	margin-right: 5px;
+}
+
+.delbtn {
+	text-align: left;
+	margin-top: 15px;
+}
+
+.newGroup {
+	width: 30% !important;
+}
+
+.thead-color {
+	max-width: 100%;
+	white-space: nowrap;
+}
+
+.boardList_tr td, .scrapList_tr td, .scrapCList_tr td, .scrapEList_tr td,
+	.classJList_tr td, .classOList_tr td, .gray {
+	color: #6d6d6d;
+}
+
+/*
+
+관리자 페이지 css
+
+*/
+.chanagebtn {
+	display: inline-block;
+}
+.scrapList_tr .RTitle, .scrapCList_tr .RTitie, .scrapEList_tr .RTitle {
+	color: #000;
+}
+
+#mpReBtn, #mpNoBtn, #nav-reply-tab, #nav-user-tab {
+	color: #59bfbf;
+}
+
+#mynoticebtn {
+	background-color: #59bfbf;
+	color: #fff;
+	border: none;
+	font-size: 14px;
+}
+
+#nav-reply-tab:hover, #nav-user-tab:hover, #nav-board-tab:hover {
+	color: #000;
+}
+
+#adchbtn {
+	margin-left: 5%;
+	font-size: 0.8rem;
+	border-radius: 7px;
+	color: #fff;
+	boarder: none;
+	background: #59bfbf;
+}
+
+.a_size {
+	font-size: 13px;
+}
+
+.report_count, .content_count, .content_all {
+	margin-bottom: 10px;
+}
+
+/*
+
+회원탈퇴 css
+
+*/
+.withdrawWrap {
+	padding-top: 120px;
+}
+
+.required {
+	color: #e7438b;
+	margin-right: 10px;
+}
+
+.form-group {
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+}
+
+#dropBtn {
+	background-color: #59bfbf;
+	width: 31%;
+}
+
+.drop_form {
+	text-align: center;
+}
+
+#drop {
+	color: inherit;
+	text-decoration: underline;
+	margin-left: 75%;
+}
+/*
+	
+	포인트
+	
+	*/
+.charge_point {
+	display: inline-block;
+}
+
+#charge_point .modal-header .close {
+	font-size: 32px !important;
+	font-weight: 500 !important;
+}
+
+#charge_point .modal-body {
+	padding: 0 !important;
+}
+
+#charge_point .modal-footer {
+	border-top: initial !important;
+}
+
+.tit_wrap {
+	overflow: hidden;
+	background: #4acccc;
+	padding: 10px 20px;
+	color: #fff;
+	border-top: 1px solid #000;
+	font-size: 18px;
+}
+
+.tit_wrap span {
+	float: left;
+}
+
+.tit_wrap .tit_cost {
+	float: right;
+}
+
+.point_wrap label {
+	overflow: hidden;
+	display: block;
+	padding: 15px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.point_wrap label input {
+	margin-top: 3px;
+	margin-right: 5px;
+	float: left;
+	width: initial;
+}
+
+.point_wrap label span {
+	float: left;
+}
+
+.point_wrap label .cost {
+	float: right;
+}
+
+#charge_point .chargeBtn {
+	display: block;
+	width: 280px;
+	margin: 10px auto;
+	background: #4acccc;
+	color: #fff;
+	padding: 10px 0;
+	cursor: pointer;
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/css/**" location="/resources/css/" />
+	<resources mapping="/img/**" location="/resources/img/" />
+	<resources mapping="/js/**" location="/resources/js/" />
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<!-- google Bean -->
+	<beans:bean class="org.springframework.social.google.connect.GoogleConnectionFactory"
+		id="googleConnectionFactory">
+		<beans:constructor-arg value="823913639609-dkmgg136teigjfaism7k5u9prdl0rs2m.apps.googleusercontent.com" />
+		<beans:constructor-arg value="E7N7aiiEaVngRdPgbrP5_OZy" />
+	</beans:bean>
+
+	<!-- 승인된 리디렉션 URI -->
+	<beans:bean class="org.springframework.social.oauth2.OAuth2Parameters" id="googleOAuth2Parameters">
+		<beans:property name="scope" value="email profile" />
+		<beans:property value="http://localhost:8282/eepp/sns/googleLogin" name="redirectUri"/>
+	</beans:bean>
+	
+	<beans:bean id="authInfo" class="bit.team.eepp.API.GoogleOAuthInfo">
+        <beans:constructor-arg value="823913639609-dkmgg136teigjfaism7k5u9prdl0rs2m.apps.googleusercontent.com" />
+        <beans:constructor-arg value="E7N7aiiEaVngRdPgbrP5_OZy" />
+    </beans:bean>
+	
+	<!-- NaverLogin Controller Beans-->
+	<beans:bean id="naverController" class="bit.team.eepp.Controller.NaverController" />
+	
+	<!-- 비밀번호 암호화 -->
+	<beans:bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	
+	<!-- 자동로그인 식별 interceptor -->
+	<beans:bean id="rememberMeInterceptor" class="bit.team.eepp.Interceptor.rememberMeInterceptor" />
+	<!-- interceptor 설정 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/**" />
+			<exclude-mapping path="/logout.do" />
+			<beans:ref bean="rememberMeInterceptor" />
+		</interceptor>
+	</interceptors>
+	
+	<!-- 자동로그인 처리를위한 interceptor -->
+	<beans:bean id="loginInterceptor" class="bit.team.eepp.Interceptor.loginInterceptor" />
+	<!-- interceptor 설정 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/login/login.do" />
+			<mapping path="/nomal_login.do" />
+			<beans:ref bean="loginInterceptor" />
+		</interceptor>
+	</interceptors>
+	
+	<!-- 관리자 페이지 접근권한 interceptor -->
+	<beans:bean id="isAdminInterceptor" class="bit.team.eepp.Interceptor.isAdminInterceptor" />
+	<!-- interceptor 설정 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/admin" />
+			<mapping path="/admin/*" />
+			<beans:ref bean="isAdminInterceptor" />
+		</interceptor>
+	</interceptors>
+	
+	<!-- 마이페이지 접근권한 interceptor -->
+	<beans:bean id="isUserInterceptor" class="bit.team.eepp.Interceptor.isUserInterceptor" />
+	<!-- interceptor 설정 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/mypage" />
+			<mapping path="/mypage/*" />
+			<beans:ref bean="isUserInterceptor" />
+		</interceptor>
+	</interceptors>
+	
+	<!-- 파일 업로드 설정 -->
+	<!-- 업로드 패스 설정 -->
+	<beans:bean class="java.lang.String" id="uploadPath">
+		<beans:constructor-arg value="/Users/dohxxzun/Documents/apache-tomcat-9.0.30/webapps/ROOT" />
+	</beans:bean>
+
+
+	<beans:bean
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+		id="multipartResolver">
+		<beans:property name="maxUploadSize" value="10485760" />
+	</beans:bean>
+	
+	<context:component-scan base-package="bit.team.eepp" />
+	
+	
+	
+</beans:beans>

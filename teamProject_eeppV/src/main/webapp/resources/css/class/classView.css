@@ -1,0 +1,455 @@
+@charset "UTF-8";
+.classViewWrap {
+	padding: 160px 0 120px;
+}
+
+.clJoinOkBtn {
+	border: none;
+	outline: 0;
+	cursor: default;
+	width: 100%;
+	font-weight: 1000;
+}
+
+.hr-sect {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: #59bfbf;
+	font-size: 120%;
+	margin: 8px 0px;
+}
+
+.hr-sect::before, .hr-sect::after {
+	content: "";
+	flex-grow: 1;
+	background: #59bfbf;
+	height: 2px;
+}
+.hr-sect::before{
+	margin-right:10px;
+}
+.hr-sect::after{
+	margin-left:10px;
+}
+
+.clContent .clContentLeft {
+	width: 100%;
+	height: auto;
+	font-weight: 1000;
+}
+
+.clContent .clContentLeft .clContentView {
+	width: 100%;
+    height: 450px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    padding: 10px;
+}
+.clContent .clContentLeft .clContentView p{
+	margin: 0;
+    line-height: 32px;
+}
+.clContent .clContentLeft .clContentView img{
+	max-width:100%;
+}
+
+.clContent .clContentLeft .clContentTitle p {
+	color: #59bfbf;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.clContent .clContentLeft .clContentSummary p {
+	color: #4c5454;
+	font-size: 100%;
+}
+
+.clContent .clContentLeft .clContentThumnail img {
+	width: 100%;
+	height: 450px;
+}
+
+.clContent .clContentRight {
+	padding-top: 20px;
+}
+
+
+	/*
+	* 우측 사이드바
+	*/
+.clContentRight .classInfoTitle{
+	margin-bottom: 0;
+    background: #59bfbf;
+    width: 35%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+.clContentRight .clContentDetailBody{
+	border: 2px solid #59bfbf;
+    width: 100%;
+}
+.clContentRight .clContentDetailBody .detailBody-ul{
+	list-style: none;
+    padding: 20px 20px 0;
+    margin-bottom: 0;
+}
+.clContentRight .clContentDetailBody .detailBody-li{
+	margin-bottom: 20px;
+    letter-spacing: 0.08rem;
+}
+.clContentRight .clContentDetailBody .detailBody-li .clInfoTitle{
+	margin-bottom: 5px;
+    color: #59bfbf;
+    font-weight: bold;
+}
+.clContentRight .clContentDetailBody .detailBody-li .clInfoTitle i{
+	margin-right:6px;
+}
+.clContentRight .clContentDetailBody .detailBody-li .clInfoTxt{
+	margin: 0;
+    padding-left: 25px;
+}
+.clContentRight .clContentDetailBody .detailBody-li #classEndCountDown{
+	color:#e7438b;
+	font-weight:bold;
+}
+.clContentRight .clContentDetailBody .detailBody-li .classCurrentPeople{
+	letter-spacing: 0.3rem;
+}
+.clContentRight .clContentDetailBody .detailBody-li .classCurrentPeople span{
+	color: #e7438b;
+	font-weight:bold;
+}
+
+.clContentRight .clContentDetailBody .detailBody-li .clDiffGroup{
+	padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.clContentRight .clContentDetailBody .detailBody-li .clDiffGroup .clDiff{
+	margin: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #26274c;
+    color: #fff;
+    text-align: center;
+    padding-top: 18px;
+}
+.clContentRight .clContentDetailBody .detailBody-li .clDiffGroup .clDiffSelect{
+	background: #e7438b!important;
+}
+
+	/*
+	* Kakao Map
+	*/
+
+.customoverlay {
+	position: relative;
+    bottom: 43px;
+    left: 3px;
+    right: 0;
+    border-radius: 6px;
+    float: left;
+}
+
+.customoverlay:nth-of-type(n) {
+	border: 0;
+	box-shadow: 0px 1px 2px #888;
+}
+
+.customoverlay a {
+	display: block;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    background: #e7438b url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 11px center;
+    background-size: 4%;
+}
+
+.customoverlay .title {
+	display: block;
+    text-align: center;
+    background: #fff;
+    margin-right: 25px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.customoverlay:after {
+	content: '';
+    position: absolute;
+    margin-left: -10px;
+    left: 50%;
+    bottom: -10px;
+    width: 20px;
+    height: 10px;
+    background: url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png) no-repeat;
+    background-size: 80%;
+}
+.clContentRight .clContentDetailBody .detailBody-li .clInfoMap{
+	margin-bottom: 10px;
+}
+
+.clContent .clContentRight .clContentDetailBody .applyMenu .classJoinForm .applyBtn {
+	width: 85%;
+    background-color: #59bfbf;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.clContent .clContentRight .clContentDetailBody .applyMenu .classJoinForm .applyBtn:hover {
+	background-color: #e7438b;
+	border: none;
+	outline: 0;
+}
+
+.clContent .clContentRight .clContentDetailBody .menuBtn button {
+	width: 45px;
+	height: 45px;
+	background-color: #e5e5e5;
+	color: #26274c;
+	margin : 0 10px;
+}
+.clContent .clContentRight .clContentDetailBody .menuBtn .btnWrap{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.clContent .clContentRight .clContentDetailBody .menuBtn button i{
+	font-size: 20px;
+    vertical-align: bottom;
+}
+
+.clContent .clContentRight .clContentDetailBody .menuBtn button:hover {
+	background-color: #e7438b;
+	color: #ffffff;
+}
+.clContent .clContentRight .clContentDetailBody .menuBtn .shareBtn{
+	margin: 0 10px;
+    width: 45px;
+    height: 45px;
+}
+.clContent .clContentRight .clContentDetailBody .menuBtn .shareBtn .share{
+	display: block;
+    cursor: pointer;
+}
+.clContent .clContentRight .clContentDetailBody .menuBtn .shareBtn .share img{
+	max-width:100%;
+}
+
+	/*
+	* 수강신청폼
+	*/
+.detailBody-li .modal-dialog{
+	max-width: 400px;
+	font-size: 14px;
+}
+.detailBody-li .modal-header
+	{
+	background-color: #59bfbf;
+}
+
+.detailBody-li .modal-header p{
+	font-size: 18px;
+    color: #fff;
+}
+.detailBody-li .modal-dialog .classImg{
+	width: 80%;
+    margin: 0 auto;
+}
+.detailBody-li .modal-body .classImg img {
+	max-width: 100%;
+}
+
+
+.detailBody-li .modal-body table{
+	width: 80%;
+	margin: 15px auto 0;
+}
+.detailBody-li .modal-body table td{
+	padding-bottom:10px;
+}
+.detailBody-li .modal-body table td:last-child{
+	padding-bottom:0;
+}
+.detailBody-li .modal-body table td.tb-title{
+    color: #59bfbf;
+    font-weight: bold;
+}
+.detailBody-li .modal-footer{
+	flex-direction: column;
+}
+.detailBody-li .modal-footer .paymentInfo{
+	margin-bottom:10px;
+}
+.detailBody-li .modal-footer .cjoinBtn{
+	margin-bottom:15px;
+}
+.detailBody-li .modal-footer .cjoinBtn button{
+	width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #59bfbf;
+    margin: 0 10px;
+}
+.detailBody-li .modal-footer .cjoinBtn button i{
+	font-size:22px;
+}
+.detailBody-li .modal-footer .cjoinBtn button:hover{
+	background-color: #e7438b;
+	color: #ffffff;
+}
+
+	/*
+	*	클래스 문의
+	*/
+	
+.clContent .clQuestion {
+	width: 100%;
+	margin-top: 60px;
+}
+
+.clContent .clQuestion .questionForm {
+	width: 100%;
+	font-weight: 800;
+}
+.clContent .clQuestion .questionForm h5{
+	font-size: 16px;
+}
+.clContent .clQuestion .questionForm h5 i{
+	margin-left:8px;
+}
+.clContent .clQuestion .questionForm table {
+	width: 100%;
+}
+
+.clContent .clQuestion .questionForm .questionBtn {
+	width: 80px;
+    font-size: 14px;
+    margin-left: 20px;
+    background-color: #59bfbf;
+    border: none;
+    color: #ffffff;
+}
+.clContent .clQuestion .questionForm .questionBtn p{
+	margin:0;
+}
+.clContent .clQuestion .questionForm p.qUser{
+	margin-bottom: 10px;
+    margin-left: 25px;
+}
+.classQuestionA .card-body .card-inner {
+	margin-left: 4rem;
+	border:none;
+}
+
+.classQuestionA .card-body .card-inner .card-body {
+	background-color:#dae0e547;
+}
+
+.classQuestionA .card-body .card-inner .card-body .row .col-md-2 .qprofile {
+	border-radius:50%;
+	width:65px;
+	height:65px;
+	margin-bottom:10px;
+}
+
+.classQuestionA .card-body .card-inner .card-body .row .col-md-2 .text-secondary {
+	font-size:80%;
+}
+
+.classQuestionA .card-body .card-inner .card-body .row .col-md-10 .clQcontent {
+	height:100px;
+	width:100%;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.classQuestionA .card-body .card-inner .card-body .row .col-md-10 .cqMenuBtn a {
+	color:#ffffff; 
+	cursor: pointer;
+}
+
+.classQuestionB .card-body .row .col-md-2 .qprofile {
+	border-radius:50%;
+	width:65px; 
+	height:65px;
+	margin-bottom:10px;
+}
+
+.classQuestionB .card-body .row .col-md-2 .text-secondary {
+	font-size:80%;
+}
+
+.classQuestionB .card-body .row .col-md-10 .clQcontent {
+	height:100px;
+	width:100%;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.classQuestionB .card-body .row .col-md-10 .cqMenuBtn a {
+	color:#ffffff;
+	cursor: pointer;
+}
+
+.comment .card-inner {
+	margin-left: 4rem;
+}
+
+.comment .card-inner .card-body .row .col-md-2 img {
+	border-radius:50%;
+	width:65px;
+	height:65px;
+	margin-bottom:10px;	
+}
+
+.comment .card-inner .card-body .row .col-md-2 .commentUser b {
+	color:#59bfbf;
+	font-size:100%;
+}
+
+.comment .card-inner .card-body .row .col-md-2 .text-secondary {
+	font-size:80%;
+}
+
+.comment .card-inner .card-body .row .col-md-10 p button {
+	width:40px; 
+	border:none; 
+	background-color:#e7438b; 
+	color:#ffffff; 
+	cursor: pointer;
+}
+
+.commentModify textarea {
+	width:650px;
+	resize: none;
+}
+
+.commentModify p button {
+	width:40px; 
+	border:none; 
+	background-color:#e7438b; 
+	color:#ffffff; 
+	cursor: pointer;	
+}
+.clQuestionPage .page-link{
+	padding: .5rem!important;
+    margin-left: 0!important;
+}

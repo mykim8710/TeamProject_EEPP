@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bit.team.eepp.Mapper.EatingMapper">
+	<select id="eatingListCount" resultType="int" parameterType="map">
+		<![CDATA[
+			SELECT COUNT(eId) FROM EATING where eId > 0
+		]]>
+		
+		<if test="eThema != null">
+			<choose>
+				<when test="eThema == 'thema_1'">
+					AND eThema = 'thema_1'
+				</when>
+				<when test="eThema == 'thema_2'">
+					AND eThema = 'thema_2'
+				</when>
+				<when test="eThema == 'thema_3'">
+					AND eThema = 'thema_3'
+				</when>
+				<when test="eThema == 'thema_4'">
+					AND eThema = 'thema_4'
+				</when>
+				<when test="eThema == 'thema_5'">
+					AND eThema = 'thema_5'
+				</when>
+				<when test="eThema == 'thema_6'">
+					AND eThema = 'thema_6'
+				</when>
+				<when test="eThema == 'thema_etc'">
+					AND eThema = 'thema_etc'
+				</when>
+			</choose>
+		</if>
+
+		<!-- 내용과 제목으로만 검색 -->
+		<if test="escri != null">
+			<choose>
+				<when test='escri.searchType == "t"'>
+					AND eTitle LIKE '%' || #{escri.keyword} || '%'
+				</when>
+				<when test='escri.searchType == "c"'>
+					AND (eKeyword_food LIKE '%' || #{escri.keyword} || '%' OR eContent LIKE '%' || #{escri.keyword} || '%')
+				</when>
+				<when test='escri.searchType == "a"'>
+					AND (eAddress_new LIKE '%' || #{escri.keyword} || '%' OR eAddress_old LIKE '%' || #{escri.keyword} || '%')
+				</when>
+				<when test='escri.searchType == "tc"'>
+					AND (eTitle LIKE '%' || #{escri.keyword} || '%' OR eContent LIKE '%' || #{escri.keyword} || '%' OR eKeyword_food LIKE '%' || #{escri.keyword} || '%')
+				</when>
+			</choose>
+		</if>
+	</select>
+
+	<select id="eatingList" resultType="bit.team.eepp.VO.EatingVO" parameterType="map">
+		SELECT * FROM
+		(SELECT A.*, ROWNUM AS RNUM, COUNT(*) OVER() AS TOTCNT FROM
+		(SELECT eId, eTitle, eThema, eCategory, eDate, eAddress_new, eAddress_old, eTel, eCONTENT, eKeyword_food,
+		(SELECT COUNT(*) from review where rvDeleted = 'no' AND eating_id = eId) as rvCount,
+		NVL((SELECT TRUNC(AVG(rvScore), 1) FROM REVIEW where rvDeleted = 'no' AND eating_id = eId GROUP BY eating_id), 0) as rvAVG
+		FROM Eating where eId = eId
+	
+		<if test="eThema != null">
+			<choose>
+				<when test="eThema == 'eThema_1'">
+					AND eThema = 'eThema_1'
+				</when>
+				<when test="eThema == 'eThema_2'">
+					AND eThema = 'eThema_2'
+				</when>
+				<when test="eThema == 'eThema_3'">
+					AND eThema = 'eThema_3'
+				</when>
+				<when test="eThema == 'eThema_4'">
+					AND eThema = 'eThema_4'
+				</when>
+				<when test="eThema == 'eThema_5'">
+					AND eThema = 'eThema_5'
+				</when>
+				<when test="eThema == 'eThema_6'">
+					AND eThema = 'eThema_6'
+				</when>
+				<when test="eThema == 'eThema_etc'">
+					AND eThema = 'eThema_etc'
+				</when>
+			</choose>
+		</if>
+	
+		<if test="escri != null">
+			<choose>
+				<when test='escri.searchType == "t"'>
+					AND eTitle LIKE '%' || #{escri.keyword} || '%'
+				</when>
+				<when test='escri.searchType == "c"'>
+					AND (eKeyword_food LIKE '%' || #{escri.keyword} || '%' OR eContent LIKE '%' || #{escri.keyword} || '%')
+				</when>
+				<when test='escri.searchType == "a"'>
+					AND (eAddress_new LIKE '%' || #{escri.keyword} || '%' OR eAddress_old LIKE '%' || #{escri.keyword} || '%')
+				</when>
+				<when test='escri.searchType == "tc"'>
+					AND (eTitle LIKE '%' || #{escri.keyword} || '%' OR eContent LIKE '%' || #{escri.keyword} || '%' OR eKeyword_food LIKE '%' || #{escri.keyword} || '%') 
+				</when>
+			</choose> 
+		</if>
+		
+		ORDER BY
+		<if test="eThema != null">
+		eDate
+		</if>
+		
+		<if test="escri != null">
+		NVL((SELECT TRUNC(AVG(rvScore), 1) FROM REVIEW where rvDeleted = 'no' AND eating_id = eId GROUP BY eating_id), 0)
+		</if>
+		
+		DESC) A) WHERE RNUM BETWEEN #{escri.rowStart} AND #{escri.rowEnd}
+	
+	</select>
+	
+	<select id="themaList" resultType="bit.team.eepp.VO.EatingVO">
+		<![CDATA[
+			SELECT * FROM 
+			(SELECT eId, eTitle, eCategory, eDate, eContent, eTel, eAddress_new, eAddress_old, eThema, eKeyword_food, eHit, 
+			(SELECT COUNT(*) FROM REVIEW WHERE rvDeleted = 'no' AND eating_id = eId) AS rvCount,
+			(SELECT COUNT(*) FROM scrap WHERE eating_id = eId) AS sCount,
+			(SELECT TRUNC(AVG(rvScore), 1) FROM REVIEW where rvDeleted = 'no' AND eating_id = eId GROUP BY eating_id) as rvAVG
+			FROM Eating
+			WHERE
+		]]>
+		
+		<if test="eThema != null">
+			<choose>
+				<when test="eThema == 'thema_1'">
+					eThema = 'thema_1'
+				</when>
+				<when test="eThema == 'thema_2'">
+					eThema = 'thema_2'
+				</when>
+				<when test="eThema == 'thema_3'">
+					eThema = 'thema_3'
+				</when>
+				<when test="eThema == 'thema_4'">
+					eThema = 'thema_4'
+				</when>
+				<when test="eThema == 'thema_5'">
+					eThema = 'thema_5'
+				</when>
+				<when test="eThema == 'thema_6'">
+					eThema = 'thema_6'
+				</when>
+				<when test="eThema == 'thema_etc'">
+					eThema = 'thema_etc'
+				</when>
+			</choose>
+		</if>
+		
+		ORDER BY rvAVG DESC nulls last)
+	</select>
+	
+	<!-- 민영 수정 부분-->
+	<select id="selectOne" resultType="bit.team.eepp.VO.EatingVO">
+		SELECT eId, eTitle, eCategory, eDate, eContent, eTel, eAddress_new, eAddress_old, eThema, eKeyword_food, eHit, eParkInfo, eOpeningHour, 
+		(SELECT COUNT(*) FROM REVIEW WHERE rvDeleted = 'no' AND eating_id = eId) AS rvCount, 
+		(SELECT TRUNC(AVG(rvScore), 1) FROM REVIEW where rvDeleted = 'no' AND eating_id = eId GROUP BY eating_id) as rvAVG,
+		(SELECT COUNT(eating_id) FROM SCRAP WHERE eating_id = #{eId}) as sCount
+		FROM EATING WHERE eId = #{eId}
+	</select>
+	
+	<update id="hitUp">
+		UPDATE EATING SET eHit = eHit + 1 WHERE eId = #{eId}
+	</update>
+	<!-- 민영 수정 부분-->
+</mapper>

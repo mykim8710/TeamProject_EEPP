@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* 모든 게시판 공통 스타일 */
+section{padding:40px 0;}
+
+
+/* 유저버튼 */
+.userBtn{
+	color: #3e3e3e!important;
+	font-weight: bold!important;
+	display: block!important;
+	cursor: pointer;
+}
+.userBtn:hover{
+	color:#59bfbf!important;
+}
+.dropdown-menu{
+	height: 115px!important;
+	padding: 10px!important;
+}
+.dropdown-menu li{
+	margin:5px 0!important;
+}
+.dropdown-menu li a{
+	cursor: pointer!important;
+	color:#59bfbf!important;
+	font-size:14px!important;
+	font-weight: normal!important;
+}
+/* 유저버튼 */
+
+/* 페이징 CSS */
+.page-link {
+	border:none;
+	color: #26274c;
+	background: #ffffff;
+	font-weight: 700;
+}
+
+.page-link:hover {
+	background: #59bfbf;
+	color: #ffffff;
+}
+/* 페이징 CSS */
+
+/* 신고창 CSS */
+.reportModalBox .modal-dialog{
+	max-width: 420px!important;
+	margin: 5% auto!important;
+}
+.reportModalBox button.close:hover{
+	color: #e7438b!important;
+}
+.reportModalBox .modal-header .modal-title{
+	font-size: 20px!important;
+    color: #e7438b!important;
+}
+.reportModalBox .modal-body{
+	padding: 15px 30px 20px;
+}
+.reportModalBox .modal-body .reportBoxIcon{
+	text-align: center;
+    margin-bottom: 10px;
+}
+.reportModalBox .modal-body .reportBoxIcon img{
+	max-width:35%;
+}
+.reportModalBox .modal-body input[type=radio]{
+	margin: 8px 8px 8px 0!important;
+}
+.reportModalBox .modal-body textarea{
+	margin-top:10px;
+	resize:none;
+	height:80px;
+	width:100%;
+}
+.reportModalBox .modal-body .form-group{
+	padding: 20px 15px;
+    margin-bottom: 0;
+    font-size: 14px;
+    background: #f5f5f5!important;
+}
+.reportModalBox .modal-footer .reportBtn{
+	border: 1px solid #e7438b;
+    color: #e7438b!important;
+    font-size:14px;
+    cursor: pointer;
+}
+/* 신고창 CSS */

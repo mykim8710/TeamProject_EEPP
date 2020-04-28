@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* memberInfo page CSS*/
+
+*{
+	font-size:14px;
+}
+.container {
+	text-align:center;
+}
+
+#logo {
+	width: 20%;
+}
+.table a{
+	color : inherit;
+}
+
+th{
+	text-align:center;
+	color : #59bfbf;
+	width:50%;
+}
+td{
+	text-align:left;
+}
+.profile_Img{
+	width:140px;
+	height:140px;
+	border-radius:50%;
+	overflow:hidden;
+}
+.required {
+	color: #e7438b;
+	margin-right: 10px;
+}
+
+/* classjoin_list.jsp */
+
+.class_img{
+	width: 80%;
+}
+.cj_info{
+	text-align:center;
+	font-size:0.9rem;
+}
+.cName{
+	font-weight:bold;
+	color: #e7438b;
+}
+.cj_info, .container{
+	text-align:center;
+}
+.cj_info a{
+	cursor: pointer;
+}
+
+/* classJoin_list.jsp  */
+
